@@ -19,18 +19,6 @@ try:
     cnx = mysql.connector.connect(user='root', password=password, host='127.0.0.1', database='reto')
     cursor = cnx.cursor()
 
-    #query_data = (7, 'Hall')
-    #query = (f"INSERT INTO rooms(room_id, name) values(%s, %s);")
-    
-    #cursor.execute(query, query_data)
-
-
-    #for light_id in range(7, 18):
-    #  query_data = (light_id, False, 0)
-    #  query = (f"INSERT INTO lights(light_id, turned_on, intensity) values(%s, %s, %s);")
-    #  cursor.execute(query, query_data)
-
-
     for _ in range(4999):
       ox_sat = random.randint(60, 100)
       if ox_sat >= 95:
